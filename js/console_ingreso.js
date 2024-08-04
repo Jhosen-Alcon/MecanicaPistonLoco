@@ -303,7 +303,7 @@ $('#tablaProd').on('click', '#btnAgregarProducto', function () {
     if (tablaProd.row(this).child.isShown()) {
         var data = tablaProd.row(this).data();
     }
-    let { producto_id, producto_nombre, producto_precioventa, producto_estatus, producto_stock } = data;
+    let { producto_id, producto_nombre, producto_preciocompra, producto_estatus, producto_stock } = data;
 
     if (producto_estatus == "INACTIVO") {
         return Swal.fire('Mensaje de advertencia', 'Debe seleccionar un producto que este activo', 'warning');
@@ -317,11 +317,11 @@ $('#tablaProd').on('click', '#btnAgregarProducto', function () {
     datosAgregar.innerHTML = `
         <td for="id">${producto_id}</td>
         <td>${producto_nombre}</td>
-        <td class="precio${producto_id}">${producto_precioventa}</td>
+        <td class="precio${producto_id}">${producto_preciocompra}</td>
         <td  style="width: 10%;">
             <input type="number" class="form-control txtCantidad${producto_id}" data-stock='${producto_stock}' data-name='${producto_nombre}' min="1" value="${cantidad}" style="width: 85%;">
         </td>
-        <td class="subTotal${producto_id}">${(producto_precioventa * cantidad)}</td>
+        <td class="subTotal${producto_id}">${(producto_preciocompra * cantidad)}</td>
         <td class="text-center">
             <button class="btn btn-danger" onclick="remove(this)"><i class="fa fa-trash"></i></button>
         </td>
@@ -371,11 +371,11 @@ function sumarTotalNeto() {
     total = parseFloat(subTotal) + parseFloat(impuestoTotal);
 
     if (tipoComprobante == "FACTURA" || tipoComprobante == "AJUSTE") {
-        $('#lblImpuesto').html("<b>ISV " + (impuesto * 100) + "% : </b>L. " + impuestoTotal);
-        $('#lblSubtotal').html("<b>Sub Total: </b> L. " + subTotal);
-        $('#lblTotalNeto').html("<b>Total Neto: </b> L. " + total.toFixed(2));
+        $('#lblImpuesto').html("<b>ISV " + (impuesto * 100) + "% : </b>Bs. " + impuestoTotal);
+        $('#lblSubtotal').html("<b>Sub Total: </b> Bs. " + subTotal);
+        $('#lblTotalNeto').html("<b>Total Neto: </b> Bs. " + total.toFixed(2));
     } else {
-        $('#lblTotalNeto').html("<b>Total Neto: </b> L. " + total.toFixed(2));
+        $('#lblTotalNeto').html("<b>Total Neto: </b> Bs. " + total.toFixed(2));
     }
 }
 
@@ -610,7 +610,7 @@ function listarProdModal() {
             { "data": "producto_nombre" }, //NOMBRE_PERSONA = alias que le pusimos a la funcion CONCAT_WS EN EL SP
             { "data": "categoria_nombre" },
             { "data": "producto_stock" },
-            { "data": "producto_precioventa" },
+            { "data": "producto_preciocompra" },
             {
                 "data": "producto_foto",
                 render: function (data, type, row) {

@@ -2236,12 +2236,12 @@ function sumarTotalNeto() {
     total = (parseFloat(subTotal) + parseFloat(impuestoTotal)) - parseFloat(descuentoTotal);
 
     // if (tipoComprobante == "FACTURA") {
-    $('#lblImpuesto').html("<b>ISV " + (impuesto * 100) + "% : </b>L. " + impuestoTotal);
-    $('#lblDescuento').html("<b>Descuento: </b>L. " + parseFloat(descuentoTotal).toFixed(2));
-    $('#lblSubtotal').html("<b>Sub Total: </b> L. " + subTotal.toFixed(2));
-    $('#lblTotalNeto').html("<b>Total Neto: </b> L. " + total.toFixed(2));
+    $('#lblImpuesto').html("<b>ISV " + (impuesto * 100) + "% : </b>Bs. " + impuestoTotal);
+    $('#lblDescuento').html("<b>Descuento: </b>Bs. " + parseFloat(descuentoTotal).toFixed(2));
+    $('#lblSubtotal').html("<b>Sub Total: </b> Bs. " + subTotal.toFixed(2));
+    $('#lblTotalNeto').html("<b>Total Neto: </b> Bs. " + total.toFixed(2));
     // } else {
-    $('#lblTotalNeto').html("<b>Total Neto: </b> L. " + total.toFixed(2));
+    $('#lblTotalNeto').html("<b>Total Neto: </b> Bs. " + total.toFixed(2));
     // }
 }
 

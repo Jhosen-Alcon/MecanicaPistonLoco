@@ -636,7 +636,7 @@ function obtenerDatosWidgets() {
             cadena += `<div class="col-lg-3 col-6">
             <div class="small-box" id="caja1">
                 <div class="inner">
-                    <h4>L. ${parseFloat(data[0][0]).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</h4>
+                    <h4>Bs. ${parseFloat(data[0][0]).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</h4>
 
                     <b>Dinero total de ventas</b>
                 </div>
@@ -649,7 +649,7 @@ function obtenerDatosWidgets() {
         <div class="col-lg-3 col-6">
             <div class="small-box" id="caja2">
                 <div class="inner">
-                    <h4>L. ${parseFloat(data[0][1]).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</h4>
+                    <h4>Bs. ${parseFloat(data[0][1]).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</h4>
 
                     <b>Dinero total de ingresos</b>
                 </div>

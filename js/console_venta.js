@@ -283,12 +283,12 @@ function sumarTotalNeto() {
     total = (parseFloat(subTotal) + parseFloat(impuestoTotal)) - parseFloat(descuentoTotal);
 
     if (tipoComprobante == "FACTURA") {
-        $('#lblImpuesto').html("<b>ISV " + (impuesto * 100) + "% : </b>L. " + impuestoTotal);
-        $('#lblDescuento').html("<b>Descuento: </b>L. " + parseFloat(descuentoTotal).toFixed(2));
-        $('#lblSubtotal').html("<b>Sub Total: </b> L. " + subTotal);
-        $('#lblTotalNeto').html("<b>Total Neto: </b> L. " + total.toFixed(2));
+        $('#lblImpuesto').html("<b>ISV " + (impuesto * 100) + "% : </b>Bs. " + impuestoTotal);
+        $('#lblDescuento').html("<b>Descuento: </b>Bs. " + parseFloat(descuentoTotal).toFixed(2));
+        $('#lblSubtotal').html("<b>Sub Total: </b> Bs. " + subTotal);
+        $('#lblTotalNeto').html("<b>Total Neto: </b> Bs. " + total.toFixed(2));
     } else {
-        $('#lblTotalNeto').html("<b>Total Neto: </b> L. " + total.toFixed(2));
+        $('#lblTotalNeto').html("<b>Total Neto: </b> Bs. " + total.toFixed(2));
     }
 }
 
@@ -413,7 +413,7 @@ function registrarDetalleVenta(idVenta, cambio) {
         if (resp > 0) {
             Swal.fire({
                 title: 'Datos de Confimacíon',
-                text: "Datos guardados correctamente, nueva venta registrada, el cambio del cliente es: L." + cambio,
+                text: "Datos guardados correctamente, nueva venta registrada, el cambio del cliente es: Bs." + cambio,
                 icon: 'success',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',

@@ -122,7 +122,7 @@ while ($row = $resultado->fetch_assoc()) {
                 Sub-Total Importe Exento
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
                 0.00
@@ -133,7 +133,7 @@ while ($row = $resultado->fetch_assoc()) {
                 Ventas Exoneradas
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
                 0.00
@@ -144,7 +144,7 @@ while ($row = $resultado->fetch_assoc()) {
                 Sub-Total Importe Gravado 15% 
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
             '.round((floatval((($row['venta_total'] - $row['venta_impuesto']) + $row['venta_descuento'])) - floatval($row['venta_impuesto'])), 2).'
@@ -155,7 +155,7 @@ while ($row = $resultado->fetch_assoc()) {
                 Sub-Total Importe Gravado 18% 
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
                 0.00
@@ -166,7 +166,7 @@ while ($row = $resultado->fetch_assoc()) {
                 15% ISV 
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
                 '.$row['venta_impuesto'].'
@@ -177,7 +177,7 @@ while ($row = $resultado->fetch_assoc()) {
                 18% ISV 
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
                 0.00
@@ -188,7 +188,7 @@ while ($row = $resultado->fetch_assoc()) {
                 Descuento y Rebajas Otorgadas 
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
                 '.$row['venta_descuento'].'
@@ -199,7 +199,7 @@ while ($row = $resultado->fetch_assoc()) {
                 GRAN TOTAL
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
             '.$row['venta_total'].'
@@ -210,7 +210,7 @@ while ($row = $resultado->fetch_assoc()) {
                 Pago:
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
             '.$row['transaccion_cantidadpago'].'
@@ -221,7 +221,7 @@ while ($row = $resultado->fetch_assoc()) {
                 Cambio:
             </td>
             <td colspan="1" class="lempira">
-                L.
+                Bs.
             </td>
             <td colspan="1">
                 '.round((floatval($row['transaccion_cantidadpago']) - $row['venta_total']),2).'
